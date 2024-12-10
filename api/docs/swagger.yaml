@@ -1,0 +1,3511 @@
+definitions:
+  handler.Response:
+    properties:
+      data: {}
+      description:
+        type: string
+      status:
+        type: integer
+    type: object
+  models.CreateAppointment:
+    properties:
+      appointment_date:
+        type: string
+      donor_id:
+        type: string
+      hospital_id:
+        type: string
+      status:
+        type: string
+    type: object
+  models.CreateBloodAcceptance:
+    properties:
+      acceptance_date:
+        type: string
+      doctor_id:
+        type: string
+      hospital_id:
+        type: string
+      patient_id:
+        type: string
+      status:
+        type: string
+    type: object
+  models.CreateBloodDonation:
+    properties:
+      blood_type_id:
+        type: string
+      donation_date:
+        type: string
+      donor_id:
+        type: string
+      hospital_id:
+        type: string
+      quantity:
+        type: number
+      status:
+        type: string
+    type: object
+  models.CreateBloodInventory:
+    properties:
+      blood_type_id:
+        type: string
+      hospital_id:
+        type: string
+      quantity:
+        type: number
+    type: object
+  models.CreateBloodRequest:
+    properties:
+      blood_type_id:
+        type: string
+      doctor_id:
+        type: string
+      hospital_id:
+        type: string
+      quantity:
+        type: number
+      status:
+        type: string
+    type: object
+  models.CreateBloodType:
+    properties:
+      bloods_type:
+        type: string
+    type: object
+  models.CreateDoctor:
+    properties:
+      address:
+        type: string
+      email:
+        type: string
+      first_name:
+        type: string
+      hospital_id:
+        type: string
+      password:
+        type: string
+      phone_number:
+        type: string
+      second_name:
+        type: string
+      specialization:
+        type: string
+    type: object
+  models.CreateHeadNurse:
+    properties:
+      address:
+        type: string
+      date_of_birth:
+        type: string
+      email:
+        type: string
+      first_name:
+        type: string
+      hospital:
+        type: string
+      password:
+        type: string
+      phone_number:
+        type: string
+      second_name:
+        type: string
+    type: object
+  models.CreateHospital:
+    properties:
+      address:
+        type: string
+      head_nurse_id:
+        type: string
+      name:
+        type: string
+      phone_number:
+        type: string
+      region_id:
+        type: string
+    type: object
+  models.CreateRegion:
+    properties:
+      name:
+        type: string
+    type: object
+  models.CreateSisAdmin:
+    properties:
+      email:
+        type: string
+      password:
+        type: string
+    type: object
+  models.CreateUser:
+    properties:
+      address:
+        type: string
+      blood_type_id:
+        type: string
+      date_of_birth:
+        type: string
+      diseases:
+        type: string
+      email:
+        type: string
+      first_name:
+        type: string
+      passport_number:
+        type: string
+      password:
+        type: string
+      phone_number:
+        type: string
+      second_name:
+        type: string
+    type: object
+  models.LoginInfo:
+    properties:
+      email:
+        type: string
+      password:
+        type: string
+    type: object
+  models.UpdateAppointment:
+    properties:
+      appointment_date:
+        type: string
+      donor_id:
+        type: string
+      hospital_id:
+        type: string
+      id:
+        type: string
+      status:
+        type: string
+    type: object
+  models.UpdateBloodAcceptance:
+    properties:
+      acceptance_date:
+        type: string
+      doctor_id:
+        type: string
+      hospital_id:
+        type: string
+      id:
+        type: string
+      patient_id:
+        type: string
+      status:
+        type: string
+    type: object
+  models.UpdateBloodDonation:
+    properties:
+      blood_type_id:
+        type: string
+      donation_date:
+        type: string
+      donor_id:
+        type: string
+      hospital_id:
+        type: string
+      id:
+        type: string
+      quantity:
+        type: number
+      status:
+        type: string
+    type: object
+  models.UpdateBloodInventory:
+    properties:
+      blood_type_id:
+        type: string
+      hospital_id:
+        type: string
+      id:
+        type: string
+      quantity:
+        type: number
+    type: object
+  models.UpdateBloodRequest:
+    properties:
+      blood_type_id:
+        type: string
+      doctor_id:
+        type: string
+      hospital_id:
+        type: string
+      id:
+        type: string
+      quantity:
+        type: number
+      status:
+        type: string
+    type: object
+  models.UpdateBloodType:
+    properties:
+      bloods_type:
+        type: string
+      id:
+        type: string
+    type: object
+  models.UpdateDoctor:
+    properties:
+      address:
+        type: string
+      email:
+        type: string
+      first_name:
+        type: string
+      hospital_id:
+        type: string
+      id:
+        type: string
+      password:
+        type: string
+      phone_number:
+        type: string
+      second_name:
+        type: string
+      specialization:
+        type: string
+    type: object
+  models.UpdateHeadNurse:
+    properties:
+      address:
+        type: string
+      date_of_birth:
+        type: string
+      email:
+        type: string
+      first_name:
+        type: string
+      hospital:
+        type: string
+      id:
+        type: string
+      password:
+        type: string
+      phone_number:
+        type: string
+      second_name:
+        type: string
+    type: object
+  models.UpdateHospital:
+    properties:
+      address:
+        type: string
+      head_nurse_id:
+        type: string
+      id:
+        type: string
+      name:
+        type: string
+      phone_number:
+        type: string
+      region_id:
+        type: string
+    type: object
+  models.UpdateRegion:
+    properties:
+      id:
+        type: string
+      name:
+        type: string
+    type: object
+  models.UpdateSisAdmin:
+    properties:
+      email:
+        type: string
+      id:
+        type: string
+      password:
+        type: string
+    type: object
+  models.UpdateUser:
+    properties:
+      address:
+        type: string
+      blood_type_id:
+        type: string
+      date_of_birth:
+        type: string
+      diseases:
+        type: string
+      email:
+        type: string
+      first_name:
+        type: string
+      id:
+        type: string
+      passport_number:
+        type: string
+      password:
+        type: string
+      phone_number:
+        type: string
+      second_name:
+        type: string
+    type: object
+info:
+  contact: {}
+paths:
+  /appointment:
+    get:
+      consumes:
+      - application/json
+      description: Get List Appointment
+      operationId: get_list_appointment
+      parameters:
+      - description: offset
+        in: query
+        name: offset
+        type: string
+      - description: limit
+        in: query
+        name: limit
+        type: string
+      - description: search
+        in: query
+        name: search
+        type: string
+      responses:
+        "200":
+          description: Success Request
+          schema:
+            allOf:
+            - $ref: '#/definitions/handler.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+        "400":
+          description: Bad Request
+          schema:
+            allOf:
+            - $ref: '#/definitions/handler.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+        "500":
+          description: Server error
+          schema:
+            allOf:
+            - $ref: '#/definitions/handler.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+      summary: Get List Appointment
+      tags:
+      - Appointment
+    post:
+      consumes:
+      - application/json
+      description: Create Appointment
+      operationId: create_appointment
+      parameters:
+      - description: CreateAppointmentRequest
+        in: body
+        name: Appointment
+        required: true
+        schema:
+          $ref: '#/definitions/models.CreateAppointment'
+      responses:
+        "200":
+          description: Success Request
+          schema:
+            allOf:
+            - $ref: '#/definitions/handler.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+        "400":
+          description: Bad Request
+          schema:
+            allOf:
+            - $ref: '#/definitions/handler.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+        "500":
+          description: Server error
+          schema:
+            allOf:
+            - $ref: '#/definitions/handler.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+      summary: Create Appointment
+      tags:
+      - Appointment
+  /appointment/{id}:
+    delete:
+      consumes:
+      - application/json
+      description: Delete Appointment
+      operationId: delete_appointment
+      parameters:
+      - description: id
+        in: path
+        name: id
+        required: true
+        type: string
+      responses:
+        "200":
+          description: Success Request
+          schema:
+            allOf:
+            - $ref: '#/definitions/handler.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+        "400":
+          description: Bad Request
+          schema:
+            allOf:
+            - $ref: '#/definitions/handler.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+        "500":
+          description: Server error
+          schema:
+            allOf:
+            - $ref: '#/definitions/handler.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+      summary: Delete Appointment
+      tags:
+      - Appointment
+    get:
+      consumes:
+      - application/json
+      description: Get By ID Appointment
+      operationId: get_by_id_appointment
+      parameters:
+      - description: id
+        in: path
+        name: id
+        type: string
+      responses:
+        "200":
+          description: Success Request
+          schema:
+            allOf:
+            - $ref: '#/definitions/handler.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+        "400":
+          description: Bad Request
+          schema:
+            allOf:
+            - $ref: '#/definitions/handler.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+        "500":
+          description: Server error
+          schema:
+            allOf:
+            - $ref: '#/definitions/handler.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+      summary: Get By ID Appointment
+      tags:
+      - Appointment
+    put:
+      consumes:
+      - application/json
+      description: Update Appointment
+      operationId: update_appointment
+      parameters:
+      - description: id
+        in: path
+        name: id
+        required: true
+        type: string
+      - description: UpdateAppointmentRequest
+        in: body
+        name: Appointment
+        required: true
+        schema:
+          $ref: '#/definitions/models.UpdateAppointment'
+      responses:
+        "200":
+          description: Success Request
+          schema:
+            allOf:
+            - $ref: '#/definitions/handler.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+        "400":
+          description: Bad Request
+          schema:
+            allOf:
+            - $ref: '#/definitions/handler.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+        "500":
+          description: Server error
+          schema:
+            allOf:
+            - $ref: '#/definitions/handler.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+      summary: Update Appointment
+      tags:
+      - Appointment
+  /blood_acceptance:
+    get:
+      consumes:
+      - application/json
+      description: Get List BloodAcceptance
+      operationId: get_list_blood_acceptance
+      parameters:
+      - description: offset
+        in: query
+        name: offset
+        type: string
+      - description: limit
+        in: query
+        name: limit
+        type: string
+      - description: search
+        in: query
+        name: search
+        type: string
+      responses:
+        "200":
+          description: Success Request
+          schema:
+            allOf:
+            - $ref: '#/definitions/handler.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+        "400":
+          description: Bad Request
+          schema:
+            allOf:
+            - $ref: '#/definitions/handler.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+        "500":
+          description: Server error
+          schema:
+            allOf:
+            - $ref: '#/definitions/handler.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+      summary: Get List BloodAcceptance
+      tags:
+      - BloodAcceptance
+    post:
+      consumes:
+      - application/json
+      description: Create BloodAcceptance
+      operationId: create_blood_acceptance
+      parameters:
+      - description: CreateBloodAcceptanceRequest
+        in: body
+        name: BloodAcceptance
+        required: true
+        schema:
+          $ref: '#/definitions/models.CreateBloodAcceptance'
+      responses:
+        "200":
+          description: Success Request
+          schema:
+            allOf:
+            - $ref: '#/definitions/handler.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+        "400":
+          description: Bad Request
+          schema:
+            allOf:
+            - $ref: '#/definitions/handler.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+        "500":
+          description: Server error
+          schema:
+            allOf:
+            - $ref: '#/definitions/handler.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+      summary: Create BloodAcceptance
+      tags:
+      - BloodAcceptance
+  /blood_acceptance/{id}:
+    delete:
+      consumes:
+      - application/json
+      description: Delete BloodAcceptance
+      operationId: delete_blood_acceptance
+      parameters:
+      - description: id
+        in: path
+        name: id
+        required: true
+        type: string
+      responses:
+        "200":
+          description: Success Request
+          schema:
+            allOf:
+            - $ref: '#/definitions/handler.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+        "400":
+          description: Bad Request
+          schema:
+            allOf:
+            - $ref: '#/definitions/handler.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+        "500":
+          description: Server error
+          schema:
+            allOf:
+            - $ref: '#/definitions/handler.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+      summary: Delete BloodAcceptance
+      tags:
+      - BloodAcceptance
+    get:
+      consumes:
+      - application/json
+      description: Get By ID BloodAcceptance
+      operationId: get_by_id_blood_acceptance
+      parameters:
+      - description: id
+        in: path
+        name: id
+        type: string
+      responses:
+        "200":
+          description: Success Request
+          schema:
+            allOf:
+            - $ref: '#/definitions/handler.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+        "400":
+          description: Bad Request
+          schema:
+            allOf:
+            - $ref: '#/definitions/handler.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+        "500":
+          description: Server error
+          schema:
+            allOf:
+            - $ref: '#/definitions/handler.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+      summary: Get By ID BloodAcceptance
+      tags:
+      - BloodAcceptance
+    put:
+      consumes:
+      - application/json
+      description: Update BloodAcceptance
+      operationId: update_blood_acceptance
+      parameters:
+      - description: id
+        in: path
+        name: id
+        required: true
+        type: string
+      - description: UpdateBloodAcceptanceRequest
+        in: body
+        name: BloodAcceptance
+        required: true
+        schema:
+          $ref: '#/definitions/models.UpdateBloodAcceptance'
+      responses:
+        "200":
+          description: Success Request
+          schema:
+            allOf:
+            - $ref: '#/definitions/handler.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+        "400":
+          description: Bad Request
+          schema:
+            allOf:
+            - $ref: '#/definitions/handler.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+        "500":
+          description: Server error
+          schema:
+            allOf:
+            - $ref: '#/definitions/handler.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+      summary: Update BloodAcceptance
+      tags:
+      - BloodAcceptance
+  /blood_acceptance_history:
+    get:
+      consumes:
+      - application/json
+      description: Get List BloodAcceptanceHistory
+      operationId: get_list_blood_acceptance_history
+      parameters:
+      - description: offset
+        in: query
+        name: offset
+        type: string
+      - description: limit
+        in: query
+        name: limit
+        type: string
+      - description: search
+        in: query
+        name: search
+        type: string
+      responses:
+        "200":
+          description: Success Request
+          schema:
+            allOf:
+            - $ref: '#/definitions/handler.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+        "400":
+          description: Bad Request
+          schema:
+            allOf:
+            - $ref: '#/definitions/handler.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+        "500":
+          description: Server error
+          schema:
+            allOf:
+            - $ref: '#/definitions/handler.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+      summary: Get List BloodAcceptanceHistory
+      tags:
+      - BloodAcceptanceHistory
+  /blood_donation:
+    get:
+      consumes:
+      - application/json
+      description: Get List BloodDonation
+      operationId: get_list_blood_donation
+      parameters:
+      - description: offset
+        in: query
+        name: offset
+        type: string
+      - description: limit
+        in: query
+        name: limit
+        type: string
+      - description: search
+        in: query
+        name: search
+        type: string
+      responses:
+        "200":
+          description: Success Request
+          schema:
+            allOf:
+            - $ref: '#/definitions/handler.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+        "400":
+          description: Bad Request
+          schema:
+            allOf:
+            - $ref: '#/definitions/handler.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+        "500":
+          description: Server error
+          schema:
+            allOf:
+            - $ref: '#/definitions/handler.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+      summary: Get List BloodDonation
+      tags:
+      - BloodDonation
+    post:
+      consumes:
+      - application/json
+      description: Create BloodDonation
+      operationId: create_blood_donation
+      parameters:
+      - description: CreateBloodDonationRequest
+        in: body
+        name: BloodDonation
+        required: true
+        schema:
+          $ref: '#/definitions/models.CreateBloodDonation'
+      responses:
+        "200":
+          description: Success Request
+          schema:
+            allOf:
+            - $ref: '#/definitions/handler.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+        "400":
+          description: Bad Request
+          schema:
+            allOf:
+            - $ref: '#/definitions/handler.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+        "500":
+          description: Server error
+          schema:
+            allOf:
+            - $ref: '#/definitions/handler.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+      summary: Create BloodDonation
+      tags:
+      - BloodDonation
+  /blood_donation/{id}:
+    delete:
+      consumes:
+      - application/json
+      description: Delete BloodDonation
+      operationId: delete_blood_donation
+      parameters:
+      - description: id
+        in: path
+        name: id
+        required: true
+        type: string
+      responses:
+        "200":
+          description: Success Request
+          schema:
+            allOf:
+            - $ref: '#/definitions/handler.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+        "400":
+          description: Bad Request
+          schema:
+            allOf:
+            - $ref: '#/definitions/handler.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+        "500":
+          description: Server error
+          schema:
+            allOf:
+            - $ref: '#/definitions/handler.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+      summary: Delete BloodDonation
+      tags:
+      - BloodDonation
+    get:
+      consumes:
+      - application/json
+      description: Get By ID BloodDonation
+      operationId: get_by_id_blood_donation
+      parameters:
+      - description: id
+        in: path
+        name: id
+        type: string
+      responses:
+        "200":
+          description: Success Request
+          schema:
+            allOf:
+            - $ref: '#/definitions/handler.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+        "400":
+          description: Bad Request
+          schema:
+            allOf:
+            - $ref: '#/definitions/handler.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+        "500":
+          description: Server error
+          schema:
+            allOf:
+            - $ref: '#/definitions/handler.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+      summary: Get By ID BloodDonation
+      tags:
+      - BloodDonation
+    put:
+      consumes:
+      - application/json
+      description: Update BloodDonation
+      operationId: update_blood_donation
+      parameters:
+      - description: id
+        in: path
+        name: id
+        required: true
+        type: string
+      - description: UpdateBloodDonationRequest
+        in: body
+        name: BloodDonation
+        required: true
+        schema:
+          $ref: '#/definitions/models.UpdateBloodDonation'
+      responses:
+        "200":
+          description: Success Request
+          schema:
+            allOf:
+            - $ref: '#/definitions/handler.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+        "400":
+          description: Bad Request
+          schema:
+            allOf:
+            - $ref: '#/definitions/handler.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+        "500":
+          description: Server error
+          schema:
+            allOf:
+            - $ref: '#/definitions/handler.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+      summary: Update BloodDonation
+      tags:
+      - BloodDonation
+  /blood_donation_history:
+    get:
+      consumes:
+      - application/json
+      description: Get List BloodDonationHistory
+      operationId: get_list_blood_donation_history
+      parameters:
+      - description: offset
+        in: query
+        name: offset
+        type: string
+      - description: limit
+        in: query
+        name: limit
+        type: string
+      - description: search
+        in: query
+        name: search
+        type: string
+      responses:
+        "200":
+          description: Success Request
+          schema:
+            allOf:
+            - $ref: '#/definitions/handler.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+        "400":
+          description: Bad Request
+          schema:
+            allOf:
+            - $ref: '#/definitions/handler.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+        "500":
+          description: Server error
+          schema:
+            allOf:
+            - $ref: '#/definitions/handler.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+      summary: Get List BloodDonationHistory
+      tags:
+      - BloodDonationHistory
+  /blood_inventory:
+    get:
+      consumes:
+      - application/json
+      description: Get List BloodInventory
+      operationId: get_list_blood_inventory
+      parameters:
+      - description: offset
+        in: query
+        name: offset
+        type: string
+      - description: limit
+        in: query
+        name: limit
+        type: string
+      - description: search
+        in: query
+        name: search
+        type: string
+      responses:
+        "200":
+          description: Success Request
+          schema:
+            allOf:
+            - $ref: '#/definitions/handler.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+        "400":
+          description: Bad Request
+          schema:
+            allOf:
+            - $ref: '#/definitions/handler.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+        "500":
+          description: Server error
+          schema:
+            allOf:
+            - $ref: '#/definitions/handler.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+      summary: Get List BloodInventory
+      tags:
+      - BloodInventory
+    post:
+      consumes:
+      - application/json
+      description: Create BloodInventory
+      operationId: create_blood_inventory
+      parameters:
+      - description: CreateBloodInventoryRequest
+        in: body
+        name: BloodInventory
+        required: true
+        schema:
+          $ref: '#/definitions/models.CreateBloodInventory'
+      responses:
+        "200":
+          description: Success Request
+          schema:
+            allOf:
+            - $ref: '#/definitions/handler.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+        "400":
+          description: Bad Request
+          schema:
+            allOf:
+            - $ref: '#/definitions/handler.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+        "500":
+          description: Server error
+          schema:
+            allOf:
+            - $ref: '#/definitions/handler.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+      summary: Create BloodInventory
+      tags:
+      - BloodInventory
+  /blood_inventory/{id}:
+    delete:
+      consumes:
+      - application/json
+      description: Delete BloodInventory
+      operationId: delete_blood_inventory
+      parameters:
+      - description: id
+        in: path
+        name: id
+        required: true
+        type: string
+      responses:
+        "200":
+          description: Success Request
+          schema:
+            allOf:
+            - $ref: '#/definitions/handler.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+        "400":
+          description: Bad Request
+          schema:
+            allOf:
+            - $ref: '#/definitions/handler.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+        "500":
+          description: Server error
+          schema:
+            allOf:
+            - $ref: '#/definitions/handler.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+      summary: Delete BloodInventory
+      tags:
+      - BloodInventory
+    get:
+      consumes:
+      - application/json
+      description: Get By ID BloodInventory
+      operationId: get_by_id_blood_inventory
+      parameters:
+      - description: id
+        in: path
+        name: id
+        type: string
+      responses:
+        "200":
+          description: Success Request
+          schema:
+            allOf:
+            - $ref: '#/definitions/handler.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+        "400":
+          description: Bad Request
+          schema:
+            allOf:
+            - $ref: '#/definitions/handler.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+        "500":
+          description: Server error
+          schema:
+            allOf:
+            - $ref: '#/definitions/handler.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+      summary: Get By ID BloodInventory
+      tags:
+      - BloodInventory
+    put:
+      consumes:
+      - application/json
+      description: Update BloodInventory
+      operationId: update_blood_inventory
+      parameters:
+      - description: id
+        in: path
+        name: id
+        required: true
+        type: string
+      - description: UpdateBloodInventoryRequest
+        in: body
+        name: BloodInventory
+        required: true
+        schema:
+          $ref: '#/definitions/models.UpdateBloodInventory'
+      responses:
+        "200":
+          description: Success Request
+          schema:
+            allOf:
+            - $ref: '#/definitions/handler.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+        "400":
+          description: Bad Request
+          schema:
+            allOf:
+            - $ref: '#/definitions/handler.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+        "500":
+          description: Server error
+          schema:
+            allOf:
+            - $ref: '#/definitions/handler.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+      summary: Update BloodInventory
+      tags:
+      - BloodInventory
+  /blood_request:
+    get:
+      consumes:
+      - application/json
+      description: Get List BloodRequest
+      operationId: get_list_blood_request
+      parameters:
+      - description: offset
+        in: query
+        name: offset
+        type: string
+      - description: limit
+        in: query
+        name: limit
+        type: string
+      - description: search
+        in: query
+        name: search
+        type: string
+      responses:
+        "200":
+          description: Success Request
+          schema:
+            allOf:
+            - $ref: '#/definitions/handler.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+        "400":
+          description: Bad Request
+          schema:
+            allOf:
+            - $ref: '#/definitions/handler.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+        "500":
+          description: Server error
+          schema:
+            allOf:
+            - $ref: '#/definitions/handler.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+      summary: Get List BloodRequest
+      tags:
+      - BloodRequest
+    post:
+      consumes:
+      - application/json
+      description: Create BloodRequest
+      operationId: create_blood_request
+      parameters:
+      - description: CreateBloodRequestRequest
+        in: body
+        name: BloodRequest
+        required: true
+        schema:
+          $ref: '#/definitions/models.CreateBloodRequest'
+      responses:
+        "200":
+          description: Success Request
+          schema:
+            allOf:
+            - $ref: '#/definitions/handler.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+        "400":
+          description: Bad Request
+          schema:
+            allOf:
+            - $ref: '#/definitions/handler.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+        "500":
+          description: Server error
+          schema:
+            allOf:
+            - $ref: '#/definitions/handler.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+      summary: Create BloodRequest
+      tags:
+      - BloodRequest
+  /blood_request/{id}:
+    delete:
+      consumes:
+      - application/json
+      description: Delete BloodRequest
+      operationId: delete_blood_blood_request
+      parameters:
+      - description: id
+        in: path
+        name: id
+        required: true
+        type: string
+      responses:
+        "200":
+          description: Success Request
+          schema:
+            allOf:
+            - $ref: '#/definitions/handler.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+        "400":
+          description: Bad Request
+          schema:
+            allOf:
+            - $ref: '#/definitions/handler.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+        "500":
+          description: Server error
+          schema:
+            allOf:
+            - $ref: '#/definitions/handler.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+      summary: Delete BloodRequest
+      tags:
+      - BloodRequest
+    get:
+      consumes:
+      - application/json
+      description: Get By ID BloodRequest
+      operationId: get_by_id_blood_blood_request
+      parameters:
+      - description: id
+        in: path
+        name: id
+        type: string
+      responses:
+        "200":
+          description: Success Request
+          schema:
+            allOf:
+            - $ref: '#/definitions/handler.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+        "400":
+          description: Bad Request
+          schema:
+            allOf:
+            - $ref: '#/definitions/handler.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+        "500":
+          description: Server error
+          schema:
+            allOf:
+            - $ref: '#/definitions/handler.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+      summary: Get By ID BloodRequest
+      tags:
+      - BloodRequest
+    put:
+      consumes:
+      - application/json
+      description: Update BloodRequest
+      operationId: update_blood_request
+      parameters:
+      - description: id
+        in: path
+        name: id
+        required: true
+        type: string
+      - description: UpdateBloodRequestRequest
+        in: body
+        name: BloodRequest
+        required: true
+        schema:
+          $ref: '#/definitions/models.UpdateBloodRequest'
+      responses:
+        "200":
+          description: Success Request
+          schema:
+            allOf:
+            - $ref: '#/definitions/handler.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+        "400":
+          description: Bad Request
+          schema:
+            allOf:
+            - $ref: '#/definitions/handler.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+        "500":
+          description: Server error
+          schema:
+            allOf:
+            - $ref: '#/definitions/handler.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+      summary: Update BloodRequest
+      tags:
+      - BloodRequest
+  /blood_request_history:
+    get:
+      consumes:
+      - application/json
+      description: Get List BloodRequestHistory
+      operationId: get_list_blood_request_history
+      parameters:
+      - description: offset
+        in: query
+        name: offset
+        type: string
+      - description: limit
+        in: query
+        name: limit
+        type: string
+      - description: search
+        in: query
+        name: search
+        type: string
+      responses:
+        "200":
+          description: Success Request
+          schema:
+            allOf:
+            - $ref: '#/definitions/handler.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+        "400":
+          description: Bad Request
+          schema:
+            allOf:
+            - $ref: '#/definitions/handler.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+        "500":
+          description: Server error
+          schema:
+            allOf:
+            - $ref: '#/definitions/handler.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+      summary: Get List BloodRequestHistory
+      tags:
+      - BloodRequestHistory
+  /blood_type:
+    get:
+      consumes:
+      - application/json
+      description: Get List BloodType
+      operationId: get_list_blood_type
+      parameters:
+      - description: offset
+        in: query
+        name: offset
+        type: string
+      - description: limit
+        in: query
+        name: limit
+        type: string
+      - description: search
+        in: query
+        name: search
+        type: string
+      responses:
+        "200":
+          description: Success Request
+          schema:
+            allOf:
+            - $ref: '#/definitions/handler.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+        "400":
+          description: Bad Request
+          schema:
+            allOf:
+            - $ref: '#/definitions/handler.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+        "500":
+          description: Server error
+          schema:
+            allOf:
+            - $ref: '#/definitions/handler.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+      summary: Get List BloodType
+      tags:
+      - BloodType
+    post:
+      consumes:
+      - application/json
+      description: Create BloodType
+      operationId: create_blood_type
+      parameters:
+      - description: CreateBloodTypeRequest
+        in: body
+        name: BloodType
+        required: true
+        schema:
+          $ref: '#/definitions/models.CreateBloodType'
+      responses:
+        "200":
+          description: Success Request
+          schema:
+            allOf:
+            - $ref: '#/definitions/handler.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+        "400":
+          description: Bad Request
+          schema:
+            allOf:
+            - $ref: '#/definitions/handler.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+        "500":
+          description: Server error
+          schema:
+            allOf:
+            - $ref: '#/definitions/handler.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+      summary: Create BloodType
+      tags:
+      - BloodType
+  /blood_type/{id}:
+    delete:
+      consumes:
+      - application/json
+      description: Delete BloodType
+      operationId: delete_blood_type
+      parameters:
+      - description: id
+        in: path
+        name: id
+        required: true
+        type: string
+      responses:
+        "200":
+          description: Success Request
+          schema:
+            allOf:
+            - $ref: '#/definitions/handler.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+        "400":
+          description: Bad Request
+          schema:
+            allOf:
+            - $ref: '#/definitions/handler.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+        "500":
+          description: Server error
+          schema:
+            allOf:
+            - $ref: '#/definitions/handler.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+      summary: Delete BloodType
+      tags:
+      - BloodType
+    get:
+      consumes:
+      - application/json
+      description: Get By ID BloodType
+      operationId: get_by_id_blood_type
+      parameters:
+      - description: id
+        in: path
+        name: id
+        type: string
+      responses:
+        "200":
+          description: Success Request
+          schema:
+            allOf:
+            - $ref: '#/definitions/handler.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+        "400":
+          description: Bad Request
+          schema:
+            allOf:
+            - $ref: '#/definitions/handler.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+        "500":
+          description: Server error
+          schema:
+            allOf:
+            - $ref: '#/definitions/handler.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+      summary: Get By ID BloodType
+      tags:
+      - BloodType
+    put:
+      consumes:
+      - application/json
+      description: Update BloodType
+      operationId: update_blood_type
+      parameters:
+      - description: id
+        in: path
+        name: id
+        required: true
+        type: string
+      - description: UpdateBloodTypeRequest
+        in: body
+        name: BloodType
+        required: true
+        schema:
+          $ref: '#/definitions/models.UpdateBloodType'
+      responses:
+        "200":
+          description: Success Request
+          schema:
+            allOf:
+            - $ref: '#/definitions/handler.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+        "400":
+          description: Bad Request
+          schema:
+            allOf:
+            - $ref: '#/definitions/handler.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+        "500":
+          description: Server error
+          schema:
+            allOf:
+            - $ref: '#/definitions/handler.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+      summary: Update BloodType
+      tags:
+      - BloodType
+  /doctor:
+    get:
+      consumes:
+      - application/json
+      description: Get List Doctor
+      operationId: get_list_doctor
+      parameters:
+      - description: offset
+        in: query
+        name: offset
+        type: string
+      - description: limit
+        in: query
+        name: limit
+        type: string
+      - description: search
+        in: query
+        name: search
+        type: string
+      responses:
+        "200":
+          description: Success Request
+          schema:
+            allOf:
+            - $ref: '#/definitions/handler.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+        "400":
+          description: Bad Request
+          schema:
+            allOf:
+            - $ref: '#/definitions/handler.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+        "500":
+          description: Server error
+          schema:
+            allOf:
+            - $ref: '#/definitions/handler.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+      summary: Get List Doctor
+      tags:
+      - Doctor
+    post:
+      consumes:
+      - application/json
+      description: Create Doctor
+      operationId: create_doctor
+      parameters:
+      - description: CreateDoctorRequest
+        in: body
+        name: Doctor
+        required: true
+        schema:
+          $ref: '#/definitions/models.CreateDoctor'
+      responses:
+        "200":
+          description: Success Request
+          schema:
+            allOf:
+            - $ref: '#/definitions/handler.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+        "400":
+          description: Bad Request
+          schema:
+            allOf:
+            - $ref: '#/definitions/handler.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+        "500":
+          description: Server error
+          schema:
+            allOf:
+            - $ref: '#/definitions/handler.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+      summary: Create Doctor
+      tags:
+      - Doctor
+  /doctor/{id}:
+    delete:
+      consumes:
+      - application/json
+      description: Delete Doctor
+      operationId: delete_doctor
+      parameters:
+      - description: id
+        in: path
+        name: id
+        required: true
+        type: string
+      responses:
+        "200":
+          description: Success Request
+          schema:
+            allOf:
+            - $ref: '#/definitions/handler.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+        "400":
+          description: Bad Request
+          schema:
+            allOf:
+            - $ref: '#/definitions/handler.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+        "500":
+          description: Server error
+          schema:
+            allOf:
+            - $ref: '#/definitions/handler.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+      summary: Delete Doctor
+      tags:
+      - Doctor
+    get:
+      consumes:
+      - application/json
+      description: Get By ID Doctor
+      operationId: get_by_id_doctor
+      parameters:
+      - description: id
+        in: path
+        name: id
+        type: string
+      responses:
+        "200":
+          description: Success Request
+          schema:
+            allOf:
+            - $ref: '#/definitions/handler.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+        "400":
+          description: Bad Request
+          schema:
+            allOf:
+            - $ref: '#/definitions/handler.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+        "500":
+          description: Server error
+          schema:
+            allOf:
+            - $ref: '#/definitions/handler.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+      summary: Get By ID Doctor
+      tags:
+      - Doctor
+    put:
+      consumes:
+      - application/json
+      description: Update Doctor
+      operationId: update_doctor
+      parameters:
+      - description: id
+        in: path
+        name: id
+        required: true
+        type: string
+      - description: UpdateDoctorRequest
+        in: body
+        name: Doctor
+        required: true
+        schema:
+          $ref: '#/definitions/models.UpdateDoctor'
+      responses:
+        "200":
+          description: Success Request
+          schema:
+            allOf:
+            - $ref: '#/definitions/handler.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+        "400":
+          description: Bad Request
+          schema:
+            allOf:
+            - $ref: '#/definitions/handler.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+        "500":
+          description: Server error
+          schema:
+            allOf:
+            - $ref: '#/definitions/handler.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+      summary: Update Doctor
+      tags:
+      - Doctor
+  /doctor_login:
+    post:
+      consumes:
+      - application/json
+      description: DoctorLogin
+      operationId: doctor_login
+      parameters:
+      - description: DoctorLoginRequest
+        in: body
+        name: doctor_login
+        required: true
+        schema:
+          $ref: '#/definitions/models.LoginInfo'
+      responses:
+        "200":
+          description: Success Request
+          schema:
+            allOf:
+            - $ref: '#/definitions/handler.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+        "400":
+          description: Bad Request
+          schema:
+            allOf:
+            - $ref: '#/definitions/handler.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+        "500":
+          description: Server error
+          schema:
+            allOf:
+            - $ref: '#/definitions/handler.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+      summary: DoctorLogin
+      tags:
+      - DoctorLogin
+  /doctor_register:
+    post:
+      consumes:
+      - application/json
+      description: DoctorRegister
+      operationId: doctor_register
+      parameters:
+      - description: CreateDoctorRequest
+        in: body
+        name: doctor_register
+        required: true
+        schema:
+          $ref: '#/definitions/models.CreateDoctor'
+      responses:
+        "200":
+          description: Success Request
+          schema:
+            allOf:
+            - $ref: '#/definitions/handler.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+        "400":
+          description: Bad Request
+          schema:
+            allOf:
+            - $ref: '#/definitions/handler.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+        "500":
+          description: Server error
+          schema:
+            allOf:
+            - $ref: '#/definitions/handler.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+      summary: DoctorRegister
+      tags:
+      - DoctorRegister
+  /head_nurse:
+    get:
+      consumes:
+      - application/json
+      description: Get List HeadNurse
+      operationId: get_list_head_nurse
+      parameters:
+      - description: offset
+        in: query
+        name: offset
+        type: string
+      - description: limit
+        in: query
+        name: limit
+        type: string
+      - description: search
+        in: query
+        name: search
+        type: string
+      responses:
+        "200":
+          description: Success Request
+          schema:
+            allOf:
+            - $ref: '#/definitions/handler.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+        "400":
+          description: Bad Request
+          schema:
+            allOf:
+            - $ref: '#/definitions/handler.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+        "500":
+          description: Server error
+          schema:
+            allOf:
+            - $ref: '#/definitions/handler.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+      summary: Get List HeadNurse
+      tags:
+      - HeadNurse
+    post:
+      consumes:
+      - application/json
+      description: Create HeadNurse
+      operationId: create_head_nurse
+      parameters:
+      - description: CreateHeadNurseRequest
+        in: body
+        name: HeadNurse
+        required: true
+        schema:
+          $ref: '#/definitions/models.CreateHeadNurse'
+      responses:
+        "200":
+          description: Success Request
+          schema:
+            allOf:
+            - $ref: '#/definitions/handler.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+        "400":
+          description: Bad Request
+          schema:
+            allOf:
+            - $ref: '#/definitions/handler.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+        "500":
+          description: Server error
+          schema:
+            allOf:
+            - $ref: '#/definitions/handler.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+      summary: Create HeadNurse
+      tags:
+      - HeadNurse
+  /head_nurse/{id}:
+    delete:
+      consumes:
+      - application/json
+      description: Delete HeadNurse
+      operationId: delete_head_nurse
+      parameters:
+      - description: id
+        in: path
+        name: id
+        required: true
+        type: string
+      responses:
+        "200":
+          description: Success Request
+          schema:
+            allOf:
+            - $ref: '#/definitions/handler.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+        "400":
+          description: Bad Request
+          schema:
+            allOf:
+            - $ref: '#/definitions/handler.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+        "500":
+          description: Server error
+          schema:
+            allOf:
+            - $ref: '#/definitions/handler.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+      summary: Delete HeadNurse
+      tags:
+      - HeadNurse
+    get:
+      consumes:
+      - application/json
+      description: Get By ID HeadNurse
+      operationId: get_by_id_head_nurse
+      parameters:
+      - description: id
+        in: path
+        name: id
+        type: string
+      responses:
+        "200":
+          description: Success Request
+          schema:
+            allOf:
+            - $ref: '#/definitions/handler.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+        "400":
+          description: Bad Request
+          schema:
+            allOf:
+            - $ref: '#/definitions/handler.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+        "500":
+          description: Server error
+          schema:
+            allOf:
+            - $ref: '#/definitions/handler.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+      summary: Get By ID HeadNurse
+      tags:
+      - HeadNurse
+    put:
+      consumes:
+      - application/json
+      description: Update HeadNurse
+      operationId: update_head_nurse
+      parameters:
+      - description: id
+        in: path
+        name: id
+        required: true
+        type: string
+      - description: UpdateHeadNurseRequest
+        in: body
+        name: HeadNurse
+        required: true
+        schema:
+          $ref: '#/definitions/models.UpdateHeadNurse'
+      responses:
+        "200":
+          description: Success Request
+          schema:
+            allOf:
+            - $ref: '#/definitions/handler.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+        "400":
+          description: Bad Request
+          schema:
+            allOf:
+            - $ref: '#/definitions/handler.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+        "500":
+          description: Server error
+          schema:
+            allOf:
+            - $ref: '#/definitions/handler.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+      summary: Update HeadNurse
+      tags:
+      - HeadNurse
+  /head_nurse_login:
+    post:
+      consumes:
+      - application/json
+      description: HeadNurseLogin
+      operationId: head_nurse_login
+      parameters:
+      - description: HeadNurseLoginRequest
+        in: body
+        name: head_nurse_login
+        required: true
+        schema:
+          $ref: '#/definitions/models.LoginInfo'
+      responses:
+        "200":
+          description: Success Request
+          schema:
+            allOf:
+            - $ref: '#/definitions/handler.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+        "400":
+          description: Bad Request
+          schema:
+            allOf:
+            - $ref: '#/definitions/handler.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+        "500":
+          description: Server error
+          schema:
+            allOf:
+            - $ref: '#/definitions/handler.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+      summary: HeadNurseLogin
+      tags:
+      - HeadNurseLogin
+  /head_nurse_register:
+    post:
+      consumes:
+      - application/json
+      description: HeadNurseRegister
+      operationId: head_nurse_register
+      parameters:
+      - description: CreateHeadNurseRequest
+        in: body
+        name: head_nurse_register
+        required: true
+        schema:
+          $ref: '#/definitions/models.CreateHeadNurse'
+      responses:
+        "200":
+          description: Success Request
+          schema:
+            allOf:
+            - $ref: '#/definitions/handler.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+        "400":
+          description: Bad Request
+          schema:
+            allOf:
+            - $ref: '#/definitions/handler.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+        "500":
+          description: Server error
+          schema:
+            allOf:
+            - $ref: '#/definitions/handler.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+      summary: HeadNurseRegister
+      tags:
+      - HeadNurseRegister
+  /hospital:
+    get:
+      consumes:
+      - application/json
+      description: Get List Hospital
+      operationId: get_list_hospital
+      parameters:
+      - description: offset
+        in: query
+        name: offset
+        type: string
+      - description: limit
+        in: query
+        name: limit
+        type: string
+      - description: search
+        in: query
+        name: search
+        type: string
+      responses:
+        "200":
+          description: Success Request
+          schema:
+            allOf:
+            - $ref: '#/definitions/handler.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+        "400":
+          description: Bad Request
+          schema:
+            allOf:
+            - $ref: '#/definitions/handler.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+        "500":
+          description: Server error
+          schema:
+            allOf:
+            - $ref: '#/definitions/handler.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+      summary: Get List Hospital
+      tags:
+      - Hospital
+    post:
+      consumes:
+      - application/json
+      description: Create Hospital
+      operationId: create_hospital
+      parameters:
+      - description: CreateHospitalRequest
+        in: body
+        name: Hospital
+        required: true
+        schema:
+          $ref: '#/definitions/models.CreateHospital'
+      responses:
+        "200":
+          description: Success Request
+          schema:
+            allOf:
+            - $ref: '#/definitions/handler.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+        "400":
+          description: Bad Request
+          schema:
+            allOf:
+            - $ref: '#/definitions/handler.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+        "500":
+          description: Server error
+          schema:
+            allOf:
+            - $ref: '#/definitions/handler.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+      summary: Create Hospital
+      tags:
+      - Hospital
+  /hospital/{id}:
+    delete:
+      consumes:
+      - application/json
+      description: Delete Hospital
+      operationId: delete_hospital
+      parameters:
+      - description: id
+        in: path
+        name: id
+        required: true
+        type: string
+      responses:
+        "200":
+          description: Success Request
+          schema:
+            allOf:
+            - $ref: '#/definitions/handler.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+        "400":
+          description: Bad Request
+          schema:
+            allOf:
+            - $ref: '#/definitions/handler.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+        "500":
+          description: Server error
+          schema:
+            allOf:
+            - $ref: '#/definitions/handler.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+      summary: Delete Hospital
+      tags:
+      - Hospital
+    get:
+      consumes:
+      - application/json
+      description: Get By ID Hospital
+      operationId: get_by_id_hospital
+      parameters:
+      - description: id
+        in: path
+        name: id
+        type: string
+      responses:
+        "200":
+          description: Success Request
+          schema:
+            allOf:
+            - $ref: '#/definitions/handler.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+        "400":
+          description: Bad Request
+          schema:
+            allOf:
+            - $ref: '#/definitions/handler.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+        "500":
+          description: Server error
+          schema:
+            allOf:
+            - $ref: '#/definitions/handler.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+      summary: Get By ID Hospital
+      tags:
+      - Hospital
+    put:
+      consumes:
+      - application/json
+      description: Update Hospital
+      operationId: update_hospital
+      parameters:
+      - description: id
+        in: path
+        name: id
+        required: true
+        type: string
+      - description: UpdateHospitalRequest
+        in: body
+        name: Hospital
+        required: true
+        schema:
+          $ref: '#/definitions/models.UpdateHospital'
+      responses:
+        "200":
+          description: Success Request
+          schema:
+            allOf:
+            - $ref: '#/definitions/handler.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+        "400":
+          description: Bad Request
+          schema:
+            allOf:
+            - $ref: '#/definitions/handler.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+        "500":
+          description: Server error
+          schema:
+            allOf:
+            - $ref: '#/definitions/handler.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+      summary: Update Hospital
+      tags:
+      - Hospital
+  /login:
+    post:
+      consumes:
+      - application/json
+      description: Login
+      operationId: login
+      parameters:
+      - description: LoginRequest
+        in: body
+        name: login
+        required: true
+        schema:
+          $ref: '#/definitions/models.LoginInfo'
+      responses:
+        "200":
+          description: Success Request
+          schema:
+            allOf:
+            - $ref: '#/definitions/handler.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+        "400":
+          description: Bad Request
+          schema:
+            allOf:
+            - $ref: '#/definitions/handler.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+        "500":
+          description: Server error
+          schema:
+            allOf:
+            - $ref: '#/definitions/handler.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+      summary: Login
+      tags:
+      - Login
+  /region:
+    get:
+      consumes:
+      - application/json
+      description: Get List Region
+      operationId: get_list_region
+      parameters:
+      - description: offset
+        in: query
+        name: offset
+        type: string
+      - description: limit
+        in: query
+        name: limit
+        type: string
+      - description: search
+        in: query
+        name: search
+        type: string
+      responses:
+        "200":
+          description: Success Request
+          schema:
+            allOf:
+            - $ref: '#/definitions/handler.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+        "400":
+          description: Bad Request
+          schema:
+            allOf:
+            - $ref: '#/definitions/handler.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+        "500":
+          description: Server error
+          schema:
+            allOf:
+            - $ref: '#/definitions/handler.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+      summary: Get List Region
+      tags:
+      - Region
+    post:
+      consumes:
+      - application/json
+      description: Create Region
+      operationId: create_region
+      parameters:
+      - description: CreateRegionRequest
+        in: body
+        name: Region
+        required: true
+        schema:
+          $ref: '#/definitions/models.CreateRegion'
+      responses:
+        "200":
+          description: Success Request
+          schema:
+            allOf:
+            - $ref: '#/definitions/handler.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+        "400":
+          description: Bad Request
+          schema:
+            allOf:
+            - $ref: '#/definitions/handler.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+        "500":
+          description: Server error
+          schema:
+            allOf:
+            - $ref: '#/definitions/handler.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+      summary: Create Region
+      tags:
+      - Region
+  /region/{id}:
+    delete:
+      consumes:
+      - application/json
+      description: Delete Region
+      operationId: delete_region
+      parameters:
+      - description: id
+        in: path
+        name: id
+        required: true
+        type: string
+      responses:
+        "200":
+          description: Success Request
+          schema:
+            allOf:
+            - $ref: '#/definitions/handler.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+        "400":
+          description: Bad Request
+          schema:
+            allOf:
+            - $ref: '#/definitions/handler.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+        "500":
+          description: Server error
+          schema:
+            allOf:
+            - $ref: '#/definitions/handler.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+      summary: Delete Region
+      tags:
+      - Region
+    get:
+      consumes:
+      - application/json
+      description: Get By ID Region
+      operationId: get_by_id_region
+      parameters:
+      - description: id
+        in: path
+        name: id
+        type: string
+      responses:
+        "200":
+          description: Success Request
+          schema:
+            allOf:
+            - $ref: '#/definitions/handler.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+        "400":
+          description: Bad Request
+          schema:
+            allOf:
+            - $ref: '#/definitions/handler.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+        "500":
+          description: Server error
+          schema:
+            allOf:
+            - $ref: '#/definitions/handler.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+      summary: Get By ID Region
+      tags:
+      - Region
+    put:
+      consumes:
+      - application/json
+      description: Update Region
+      operationId: update_region
+      parameters:
+      - description: id
+        in: path
+        name: id
+        required: true
+        type: string
+      - description: UpdateRegionRequest
+        in: body
+        name: Region
+        required: true
+        schema:
+          $ref: '#/definitions/models.UpdateRegion'
+      responses:
+        "200":
+          description: Success Request
+          schema:
+            allOf:
+            - $ref: '#/definitions/handler.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+        "400":
+          description: Bad Request
+          schema:
+            allOf:
+            - $ref: '#/definitions/handler.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+        "500":
+          description: Server error
+          schema:
+            allOf:
+            - $ref: '#/definitions/handler.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+      summary: Update Region
+      tags:
+      - Region
+  /register:
+    post:
+      consumes:
+      - application/json
+      description: Register
+      operationId: register
+      parameters:
+      - description: CreateUserRequest
+        in: body
+        name: register
+        required: true
+        schema:
+          $ref: '#/definitions/models.CreateUser'
+      responses:
+        "200":
+          description: Success Request
+          schema:
+            allOf:
+            - $ref: '#/definitions/handler.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+        "400":
+          description: Bad Request
+          schema:
+            allOf:
+            - $ref: '#/definitions/handler.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+        "500":
+          description: Server error
+          schema:
+            allOf:
+            - $ref: '#/definitions/handler.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+      summary: Register
+      tags:
+      - Register
+  /sis_admin:
+    get:
+      consumes:
+      - application/json
+      description: Get List SisAdmin
+      operationId: get_list_sis_admin
+      parameters:
+      - description: offset
+        in: query
+        name: offset
+        type: string
+      - description: limit
+        in: query
+        name: limit
+        type: string
+      - description: search
+        in: query
+        name: search
+        type: string
+      responses:
+        "200":
+          description: Success Request
+          schema:
+            allOf:
+            - $ref: '#/definitions/handler.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+        "400":
+          description: Bad Request
+          schema:
+            allOf:
+            - $ref: '#/definitions/handler.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+        "500":
+          description: Server error
+          schema:
+            allOf:
+            - $ref: '#/definitions/handler.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+      summary: Get List SisAdmin
+      tags:
+      - SisAdmin
+    post:
+      consumes:
+      - application/json
+      description: Create SisAdmin
+      operationId: create_sis_admin
+      parameters:
+      - description: CreateSisAdminRequest
+        in: body
+        name: SisAdmin
+        required: true
+        schema:
+          $ref: '#/definitions/models.CreateSisAdmin'
+      responses:
+        "200":
+          description: Success Request
+          schema:
+            allOf:
+            - $ref: '#/definitions/handler.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+        "400":
+          description: Bad Request
+          schema:
+            allOf:
+            - $ref: '#/definitions/handler.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+        "500":
+          description: Server error
+          schema:
+            allOf:
+            - $ref: '#/definitions/handler.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+      summary: Create SisAdmin
+      tags:
+      - SisAdmin
+  /sis_admin/{id}:
+    delete:
+      consumes:
+      - application/json
+      description: Delete SisAdmin
+      operationId: delete_sis_admin
+      parameters:
+      - description: id
+        in: path
+        name: id
+        required: true
+        type: string
+      responses:
+        "200":
+          description: Success Request
+          schema:
+            allOf:
+            - $ref: '#/definitions/handler.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+        "400":
+          description: Bad Request
+          schema:
+            allOf:
+            - $ref: '#/definitions/handler.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+        "500":
+          description: Server error
+          schema:
+            allOf:
+            - $ref: '#/definitions/handler.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+      summary: Delete SisAdmin
+      tags:
+      - SisAdmin
+    get:
+      consumes:
+      - application/json
+      description: Get By ID SisAdmin
+      operationId: get_by_id_sis_admin
+      parameters:
+      - description: id
+        in: path
+        name: id
+        type: string
+      responses:
+        "200":
+          description: Success Request
+          schema:
+            allOf:
+            - $ref: '#/definitions/handler.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+        "400":
+          description: Bad Request
+          schema:
+            allOf:
+            - $ref: '#/definitions/handler.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+        "500":
+          description: Server error
+          schema:
+            allOf:
+            - $ref: '#/definitions/handler.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+      summary: Get By ID SisAdmin
+      tags:
+      - SisAdmin
+    put:
+      consumes:
+      - application/json
+      description: Update SisAdmin
+      operationId: update_sis_admin
+      parameters:
+      - description: id
+        in: path
+        name: id
+        required: true
+        type: string
+      - description: UpdateSisAdminRequest
+        in: body
+        name: SisAdmin
+        required: true
+        schema:
+          $ref: '#/definitions/models.UpdateSisAdmin'
+      responses:
+        "200":
+          description: Success Request
+          schema:
+            allOf:
+            - $ref: '#/definitions/handler.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+        "400":
+          description: Bad Request
+          schema:
+            allOf:
+            - $ref: '#/definitions/handler.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+        "500":
+          description: Server error
+          schema:
+            allOf:
+            - $ref: '#/definitions/handler.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+      summary: Update SisAdmin
+      tags:
+      - SisAdmin
+  /sis_admin_login:
+    post:
+      consumes:
+      - application/json
+      description: SisAdminLogin
+      operationId: sis_admin_login
+      parameters:
+      - description: LoginRequest
+        in: body
+        name: sis_admin_login
+        required: true
+        schema:
+          $ref: '#/definitions/models.LoginInfo'
+      responses:
+        "200":
+          description: Success Request
+          schema:
+            allOf:
+            - $ref: '#/definitions/handler.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+        "400":
+          description: Bad Request
+          schema:
+            allOf:
+            - $ref: '#/definitions/handler.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+        "500":
+          description: Server error
+          schema:
+            allOf:
+            - $ref: '#/definitions/handler.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+      summary: SisAdminLogin
+      tags:
+      - SisAdminLogin
+  /user:
+    get:
+      consumes:
+      - application/json
+      description: Get List User
+      operationId: get_list_user
+      parameters:
+      - description: offset
+        in: query
+        name: offset
+        type: string
+      - description: limit
+        in: query
+        name: limit
+        type: string
+      - description: search
+        in: query
+        name: search
+        type: string
+      responses:
+        "200":
+          description: Success Request
+          schema:
+            allOf:
+            - $ref: '#/definitions/handler.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+        "400":
+          description: Bad Request
+          schema:
+            allOf:
+            - $ref: '#/definitions/handler.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+        "500":
+          description: Server error
+          schema:
+            allOf:
+            - $ref: '#/definitions/handler.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+      summary: Get List User
+      tags:
+      - User
+    post:
+      consumes:
+      - application/json
+      description: Create User
+      operationId: create_user
+      parameters:
+      - description: CreateUserRequest
+        in: body
+        name: User
+        required: true
+        schema:
+          $ref: '#/definitions/models.CreateUser'
+      responses:
+        "200":
+          description: Success Request
+          schema:
+            allOf:
+            - $ref: '#/definitions/handler.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+        "400":
+          description: Bad Request
+          schema:
+            allOf:
+            - $ref: '#/definitions/handler.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+        "500":
+          description: Server error
+          schema:
+            allOf:
+            - $ref: '#/definitions/handler.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+      summary: Create User
+      tags:
+      - User
+  /user/{id}:
+    delete:
+      consumes:
+      - application/json
+      description: Delete User
+      operationId: delete_user
+      parameters:
+      - description: id
+        in: path
+        name: id
+        required: true
+        type: string
+      responses:
+        "200":
+          description: Success Request
+          schema:
+            allOf:
+            - $ref: '#/definitions/handler.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+        "400":
+          description: Bad Request
+          schema:
+            allOf:
+            - $ref: '#/definitions/handler.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+        "500":
+          description: Server error
+          schema:
+            allOf:
+            - $ref: '#/definitions/handler.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+      summary: Delete User
+      tags:
+      - User
+    get:
+      consumes:
+      - application/json
+      description: Get By ID User
+      operationId: get_by_id_user
+      parameters:
+      - description: id
+        in: path
+        name: id
+        type: string
+      responses:
+        "200":
+          description: Success Request
+          schema:
+            allOf:
+            - $ref: '#/definitions/handler.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+        "400":
+          description: Bad Request
+          schema:
+            allOf:
+            - $ref: '#/definitions/handler.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+        "500":
+          description: Server error
+          schema:
+            allOf:
+            - $ref: '#/definitions/handler.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+      summary: Get By ID User
+      tags:
+      - User
+    put:
+      consumes:
+      - application/json
+      description: Update User
+      operationId: update_user
+      parameters:
+      - description: id
+        in: path
+        name: id
+        required: true
+        type: string
+      - description: UpdateUserRequest
+        in: body
+        name: User
+        required: true
+        schema:
+          $ref: '#/definitions/models.UpdateUser'
+      responses:
+        "200":
+          description: Success Request
+          schema:
+            allOf:
+            - $ref: '#/definitions/handler.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+        "400":
+          description: Bad Request
+          schema:
+            allOf:
+            - $ref: '#/definitions/handler.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+        "500":
+          description: Server error
+          schema:
+            allOf:
+            - $ref: '#/definitions/handler.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+      summary: Update User
+      tags:
+      - User
+securityDefinitions:
+  ApiKeyAuth:
+    in: header
+    name: Authorization
+    type: apiKey
+swagger: "2.0"
